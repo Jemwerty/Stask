@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sasha</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+  </head>
+  <body>
+    <div class="table">
+      {% for cell in table %}
+      {% if cell.x == 0 and cell.y != 0 %}<br>{% endif %}
+      <div class="square" style="background-color: {{ cell.color }}"></div>
+      {% endfor %}
+    </div>
+  </body>
+</html>

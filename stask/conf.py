@@ -1,0 +1,8 @@
+MAIN_COLOR = '#bbb'
+DEFECT_COLOR = '#ed4545'
+POUR_COLOR = '#4593ed'
+
+TABLE_X = 50
+TABLE_Y = 30
+
+RADIUS = 1
