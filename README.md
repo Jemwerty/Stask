@@ -1,1 +1,1 @@
-# Recomended Python Version - 3.8.5
+# Recommended Python Version - 3.8.5
