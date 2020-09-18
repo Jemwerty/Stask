@@ -14,7 +14,9 @@ class Cell:
     def is_neighbor(self, cell, color):
         if cell.color == color:
             if (cell.x in range(self.x-conf.RADIUS, self.x+conf.RADIUS+1) and
-                    cell.y in range(self.y-conf.RADIUS, self.y+conf.RADIUS+1)):
+                    cell.y in range(self.y-conf.RADIUS,
+                        self.y+conf.RADIUS+1) and
+                    (cell.x != self.x or cell.y != self.y)):
                 return True
 
         return False
@@ -44,7 +46,6 @@ class Table:
             self.y = y
         self.table = None
         self.init_table()
-
 
     def init_table(self):
         table = []
