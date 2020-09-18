@@ -10,7 +10,6 @@ class Cell:
         self.color = color
         self.in_square = False
 
-
     def is_neighbor(self, cell, color):
         if cell.color == color:
             if (cell.x in range(self.x-conf.RADIUS, self.x+conf.RADIUS+1) and
@@ -21,13 +20,11 @@ class Cell:
 
         return False
 
-
     def has_neighbors(self, table):
         for cell in table:
             if self.is_neighbor(cell, conf.DEFECT_COLOR):
                 return True
         return False
-
 
     def pour(self, table):
         for i in range(len(table)):
@@ -54,20 +51,15 @@ class Table:
                 table.append(Cell(j, i, conf.MAIN_COLOR))
         self.table = table
 
-
     def defect(self):
         table = self.table
         for i in range(len(table)):
             table[i].color = random.choice([conf.MAIN_COLOR]*15 + [conf.DEFECT_COLOR])
         self.table = table
 
-    
     def run(self):
         table = self.table
         for cell in table:
             if cell.color == conf.DEFECT_COLOR and cell.has_neighbors(table):
                 self.table = cell.pour(table)
-
-
-
 
