@@ -7,7 +7,7 @@ from fastapi.templating import Jinja2Templates
 import logic
 
 
-app = FastAPI(title="Sasha")
+app = FastAPI(title="Stask")
 app.mount('/static',
         StaticFiles(directory=os.path.join(os.getcwd(), 'static')),
         name='static')
